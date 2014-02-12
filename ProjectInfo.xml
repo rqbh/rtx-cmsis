@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  Copyright : 2012 Freescale, Inc. All Rights Reserved.
+
+  This configuration file is a standard interchange file that's format is maintained
+  by Freescale, Inc. The configuration file is a derivative work
+  of the Processor Expert Software technology licensed for use by customers
+  as defined as SOFTWARE in the product's End User License Agreement. This file
+  and format are free to use and distribute for read-only purposes. You do not have
+  the right to create these files or modify this format or use for any purposes other
+  than interchange with the Processor Expert Software technology.
+
+  THIS SOFTWARE IS PROVIDED "AS IS".
+
+  NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT
+  LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  PURPOSE APPLY TO THIS SOFTWARE. IN NO EVENT WILL FREESCALE BE LIABLE, WHETHER
+  IN CONTRACT, TORT, OR OTHERWISE, FOR ANY INCIDENTAL, SPECIAL, INDIRECT,
+  CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR
+  ANY LOSS OF USE, LOSS OF TIME, INCONVENIENCE, COMMERCIAL LOSS, OR LOST PROFITS,
+  SAVINGS, OR REVENUES TO THE FULL EXTENT SUCH MAY BE DISCLAIMED BY LAW.
+
+-->
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ProjectInfoDescription.xsd">
+  <PROCESSOR>
+    <DeviceID>MK20DX128xxx5</DeviceID>
+    <CoreNum>1</CoreNum>
+    <Cores>
+      <Core>
+        <CoreSet>Cortex-M4</CoreSet>
+      </Core>
+    </Cores>
+    <SRAMsize>16k</SRAMsize>
+    <FLASHsize>128k</FLASHsize>
+  </PROCESSOR>
+  <PATHS>
+    <LinkerCommandFile>D:\eclipse_WS\IAR_CMSIS-RTX\Project_Settings\Linker_Files\ProcessorExpert.icf</LinkerCommandFile>
+    <IncludePaths>
+      <Path>F:\eclipse\ProcessorExpert\lib\Kinetis\iofiles\</Path>
+      <Path>F:\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\</Path>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\</Path>
+    </IncludePaths>
+    <SourceCodePaths>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\</Path>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\</Path>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\</Path>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\Templates\</Path>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\</Path>
+      <Path>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\IAR\</Path>
+    </SourceCodePaths>
+  </PATHS>
+  <FILES>
+    <GeneratedCs>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\Cpu.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\INT_PendableSrvReq.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\INT_SVCall.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\PE_LDD.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\Vectors.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\Events.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\ProcessorExpert.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\HAL_CM.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_CMSIS.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Event.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_List.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Mailbox.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_MemBox.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Memory.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Mutex.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Robin.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Semaphore.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_System.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Task.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Time.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Timer.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\Templates\RTX_Conf_CM.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\MailQueue.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\MemPool.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\MsgQueue.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\Mutex.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\Semaphore.c</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\Thread.c</PathName>
+    </GeneratedCs>
+    <GeneratedHs>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\Cpu.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\INT_PendableSrvReq.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\INT_SVCall.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\IO_Map.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\PE_Const.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\PE_Error.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\PE_LDD.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Generated_Code\PE_Types.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\Events.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\RTX_CM_lib.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\arm_common_tables.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\arm_const_structs.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\arm_math.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\cmsis_os.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_cm0.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_cm0plus.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_cm3.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_cm4.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_cm4_simd.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_cmFunc.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_cmInstr.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_sc000.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\INC\core_sc300.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\RTX_Config.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Event.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_HAL_CM.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_List.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Mailbox.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_MemBox.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Memory.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Mutex.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Robin.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Semaphore.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_System.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Task.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Time.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_Timer.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\rt_TypeDef.h</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\UserCodeTemplates\osObjects.h</PathName>
+    </GeneratedHs>
+    <GeneratedASMs>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\IAR\HAL_CM3.s</PathName>
+      <PathName>D:\eclipse_WS\IAR_CMSIS-RTX\Sources\SRC\IAR\SVC_Table.s</PathName>
+    </GeneratedASMs>
+  </FILES>
+  <OPTIONS>
+  </OPTIONS>
+</export>

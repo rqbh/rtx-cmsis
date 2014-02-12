@@ -1,0 +1,608 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V6.70.1.5641/W32 for ARM               23/Jan/2014  10:58:32 #
+# Copyright 2007-2013 IAR Systems AB.                                         #
+#                                                                             #
+#    Output file  =  IAR_CMSIS-RTX.out                                        #
+#    Map file     =  D:/eclipse_WS/IAR_CMSIS-RTX/Debug/IAR_CMSIS-RTX.map      #
+#    Command line =  Generated_Code\Cpu.o Sources\Events.o                    #
+#                    Sources\SRC\HAL_CM.o Sources\SRC\IAR\HAL_CM3.o           #
+#                    Generated_Code\INT_PendableSrvReq.o                      #
+#                    Generated_Code\INT_SVCall.o                              #
+#                    Sources\UserCodeTemplates\MailQueue.o                    #
+#                    Sources\UserCodeTemplates\MemPool.o                      #
+#                    Sources\UserCodeTemplates\MsgQueue.o                     #
+#                    Sources\UserCodeTemplates\Mutex.o                        #
+#                    Generated_Code\PE_LDD.o Sources\ProcessorExpert.o        #
+#                    Sources\SRC\rt_CMSIS.o Sources\SRC\rt_Event.o            #
+#                    Sources\SRC\rt_List.o Sources\SRC\rt_Mailbox.o           #
+#                    Sources\SRC\rt_MemBox.o Sources\SRC\rt_Memory.o          #
+#                    Sources\SRC\rt_Mutex.o Sources\SRC\rt_Robin.o            #
+#                    Sources\SRC\rt_Semaphore.o Sources\SRC\rt_System.o       #
+#                    Sources\SRC\rt_Task.o Sources\SRC\rt_Time.o              #
+#                    Sources\SRC\rt_Timer.o Sources\Templates\RTX_Conf_CM.o   #
+#                    Sources\UserCodeTemplates\Semaphore.o                    #
+#                    Sources\SRC\IAR\SVC_Table.o                              #
+#                    Sources\UserCodeTemplates\Thread.o                       #
+#                    Generated_Code\Vectors.o -o IAR_CMSIS-RTX.out --config   #
+#                    D:/eclipse_WS/IAR_CMSIS-RTX\Project_Settings\Linker_File #
+#                    s\ProcessorExpert.icf --no_wrap_diagnostics --map        #
+#                    D:/eclipse_WS/IAR_CMSIS-RTX/Debug/IAR_CMSIS-RTX.map      #
+#                    --log_file D:/eclipse_WS/IAR_CMSIS-RTX/Debug/IAR_CMSIS-R #
+#                    TX.log --log initialization,modules,sections,veneers,lib #
+#                    raries,redirects,unused_fragments --redirect             #
+#                    _Printf=_PrintfFull --redirect _Scanf=_ScanfFull         #
+#                    --inline                                                 #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x000000f7] |
+                [from 0x00000410 to 0x0001ffff] { ro };
+"P2":  place in [from 0x1fffe000 to 0x1fffffff] { rw, block CSTACK, block HEAP };
+"P3":  place in [from 0x00000400 to 0x0000040f] { section FlashConfig };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                       0xf8
+  .intvec            const    0x00000000    0xf8  Vectors.o [1]
+                            - 0x000000f8    0xf8
+
+"P1", part 1 of 2:                           0x0
+  .rodata            const    0x000000f8     0x0  zero_init3.o [9]
+  .rodata            const    0x000000f8     0x0  copy_init3.o [9]
+
+"P3":                                       0x10
+  FlashConfig        const    0x00000400    0x10  Cpu.o [1]
+                            - 0x00000410    0x10
+
+"P1", part 2 of 2:                        0x2764
+  .text              ro code  0x00000410   0xd20  rt_CMSIS.o [3]
+  .text              ro code  0x00001130    0x9e  rt_Memory.o [3]
+  .text              ro code  0x000011ce    0x2e  copy_init3.o [9]
+  .text              ro code  0x000011fc   0x5ac  rt_Task.o [3]
+  .text              ro code  0x000017a8   0x1c0  rt_Mutex.o [3]
+  .text              ro code  0x00001968    0xd4  rt_Semaphore.o [3]
+  .text              ro code  0x00001a3c    0xaa  rt_MemBox.o [3]
+  .text              ro code  0x00001ae6    0x22  zero_init3.o [9]
+  .text              ro code  0x00001b08   0x30c  rt_Mailbox.o [3]
+  .text              ro code  0x00001e14   0x2a4  rt_List.o [3]
+  .text              ro code  0x000020b8   0x16c  rt_System.o [3]
+  .text              ro code  0x00002224    0xe0  HAL_CM.o [3]
+  .text              ro code  0x00002304    0x6c  rt_Robin.o [3]
+  .text              ro code  0x00002370    0x16  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002386     0x2  RTX_Conf_CM.o [5]
+  .text              ro code  0x00002388    0x5c  rt_Event.o [3]
+  .text              ro code  0x000023e4   0x1b0  Cpu.o [1]
+  .text              ro code  0x00002594   0x124  HAL_CM3.o [4]
+  .text              ro code  0x000026b8    0xc8  MsgQueue.o [6]
+  .text              ro code  0x00002780    0xb4  MailQueue.o [6]
+  .text              ro code  0x00002834    0x78  MemPool.o [6]
+  .text              ro code  0x000028ac    0x74  Mutex.o [6]
+  .text              ro code  0x00002920    0x6c  Semaphore.o [6]
+  .text              ro code  0x0000298c    0x30  Thread.o [6]
+  .text              ro code  0x000029bc    0x28  ProcessorExpert.o [2]
+  .text              ro code  0x000029e4    0x28  data_init.o [9]
+  .iar.init_table    const    0x00002a0c    0x24  - Linker created -
+  .text              ro code  0x00002a30    0x1a  cmain.o [9]
+  .text              ro code  0x00002a4a     0x4  exit.o [8]
+  .rodata            const    0x00002a4e     0x2  RTX_Conf_CM.o [5]
+  .text              ro code  0x00002a50     0xa  cexit.o [9]
+  .rodata            const    0x00002a5a     0x2  RTX_Conf_CM.o [5]
+  .text              ro code  0x00002a5c     0xc  XXexit.o [9]
+  .rodata            const    0x00002a68    0x10  MailQueue.o [6]
+  .rodata            const    0x00002a78    0x10  MailQueue.o [6]
+  .rodata            const    0x00002a88    0x10  MemPool.o [6]
+  .rodata            const    0x00002a98    0x10  MsgQueue.o [6]
+  .rodata            const    0x00002aa8    0x10  MsgQueue.o [6]
+  .rodata            const    0x00002ab8    0x10  Mutex.o [6]
+  .rodata            const    0x00002ac8    0x10  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002ad8    0x10  Semaphore.o [6]
+  .rodata            const    0x00002ae8    0x10  Thread.o [6]
+  .rodata            const    0x00002af8     0xc  MailQueue.o [6]
+  .rodata            const    0x00002b04     0xc  MemPool.o [6]
+  .rodata            const    0x00002b10     0xc  MsgQueue.o [6]
+  .text              ro code  0x00002b1c     0xc  cstartup_M.o [9]
+  .rodata            const    0x00002b28     0x8  MsgQueue.o [6]
+  .rodata            const    0x00002b30     0x8  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b38     0x4  Mutex.o [6]
+  .rodata            const    0x00002b3c     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b40     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b44     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b48     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b4c     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b50     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b54     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b58     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b5c     0x4  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b60     0x4  Semaphore.o [6]
+  .text              const    0x00002b64     0x4  SVC_Table.o [4]
+  .rodata            const    0x00002b68     0x1  RTX_Conf_CM.o [5]
+  .rodata            const    0x00002b69     0x1  RTX_Conf_CM.o [5]
+  Initializer bytes  ro data  0x00002b6c     0x8  <for P2 s0>
+                            - 0x00002b74  0x2764
+
+"P2", part 1 of 3:                           0x8
+  P2 s0                       0x1fffe000     0x8  <Init block>
+    .data            inited   0x1fffe000     0x8  MailQueue.o [6]
+                            - 0x1fffe008     0x8
+
+"P2", part 2 of 3:                        0x1110
+  .bss               zero     0x1fffe008   0x4c0  RTX_Conf_CM.o [5]
+  .bss               zero     0x1fffe4c8   0x24c  MailQueue.o [6]
+  .bss               zero     0x1fffe714   0x24c  MemPool.o [6]
+  .bss               zero     0x1fffe960   0x24c  MsgQueue.o [6]
+  .bss               zero     0x1fffebac    0x34  rt_Task.o [3]
+  .bss               zero     0x1fffebe0   0x1b0  RTX_Conf_CM.o [5]
+  .bss               zero     0x1fffed90   0x178  RTX_Conf_CM.o [5]
+  .bss               zero     0x1fffef08    0x84  RTX_Conf_CM.o [5]
+  .bss               zero     0x1fffef8c    0x50  MailQueue.o [6]
+  .bss               zero     0x1fffefdc    0x50  MsgQueue.o [6]
+  .bss               zero     0x1ffff02c    0x20  RTX_Conf_CM.o [5]
+  .bss               zero     0x1ffff04c    0x1c  RTX_Conf_CM.o [5]
+  .bss               zero     0x1ffff068    0x18  rt_List.o [3]
+  .bss               zero     0x1ffff080    0x18  rt_List.o [3]
+  .bss               zero     0x1ffff098    0x10  Mutex.o [6]
+  .bss               zero     0x1ffff0a8     0x8  rt_Robin.o [3]
+  .bss               zero     0x1ffff0b0     0x8  rt_Task.o [3]
+  .bss               zero     0x1ffff0b8     0x8  Semaphore.o [6]
+  .bss               zero     0x1ffff0c0     0x4  MailQueue.o [6]
+  .bss               zero     0x1ffff0c4     0x4  MailQueue.o [6]
+  .bss               zero     0x1ffff0c8     0x4  MailQueue.o [6]
+  .bss               zero     0x1ffff0cc     0x4  MemPool.o [6]
+  .bss               zero     0x1ffff0d0     0x4  MemPool.o [6]
+  .bss               zero     0x1ffff0d4     0x4  MsgQueue.o [6]
+  .bss               zero     0x1ffff0d8     0x4  MsgQueue.o [6]
+  .bss               zero     0x1ffff0dc     0x4  MsgQueue.o [6]
+  .bss               zero     0x1ffff0e0     0x4  MsgQueue.o [6]
+  .bss               zero     0x1ffff0e4     0x4  Mutex.o [6]
+  .bss               zero     0x1ffff0e8     0x4  Mutex.o [6]
+  .bss               zero     0x1ffff0ec     0x4  rt_CMSIS.o [3]
+  .bss               zero     0x1ffff0f0     0x4  rt_System.o [3]
+  .bss               zero     0x1ffff0f4     0x4  rt_Time.o [3]
+  .bss               zero     0x1ffff0f8     0x4  RTX_Conf_CM.o [5]
+  .bss               zero     0x1ffff0fc     0x4  RTX_Conf_CM.o [5]
+  .bss               zero     0x1ffff100     0x4  RTX_Conf_CM.o [5]
+  .bss               zero     0x1ffff104     0x4  Semaphore.o [6]
+  .bss               zero     0x1ffff108     0x4  Semaphore.o [6]
+  .bss               zero     0x1ffff10c     0x4  Thread.o [6]
+  .bss               zero     0x1ffff110     0x1  HAL_CM.o [3]
+  .bss               zero     0x1ffff111     0x1  rt_CMSIS.o [3]
+  .bss               zero     0x1ffff112     0x1  rt_CMSIS.o [3]
+  .bss               zero     0x1ffff113     0x1  rt_System.o [3]
+  .bss               zero     0x1ffff114     0x1  rt_System.o [3]
+                            - 0x1ffff115  0x110d
+
+"P2", part 3 of 3:                         0x400
+  CSTACK                      0x1ffff118   0x400  <Block>
+    CSTACK           uninit   0x1ffff118   0x400  <Block tail>
+                            - 0x1ffff518   0x400
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x110d:
+          0x1fffe008  0x110d
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+          0x00002b6c     0x8
+    1 destination range, total size 0x8:
+          0x1fffe000     0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module             ro code  ro data  rw data
+    ------             -------  -------  -------
+D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Generated_Code: [1]
+    Cpu.o                  432       16
+    Vectors.o                       248
+    --------------------------------------------
+    Total:                 432      264
+
+D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources: [2]
+    ProcessorExpert.o       40
+    --------------------------------------------
+    Total:                  40
+
+D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\SRC: [3]
+    HAL_CM.o               224                 1
+    rt_CMSIS.o           3 360                 6
+    rt_Event.o              92
+    rt_List.o              676                48
+    rt_Mailbox.o           780
+    rt_MemBox.o            170
+    rt_Memory.o            158
+    rt_Mutex.o             448
+    rt_Robin.o             108                 8
+    rt_Semaphore.o         212
+    rt_System.o            364                 6
+    rt_Task.o            1 452                60
+    rt_Time.o                                  4
+    --------------------------------------------
+    Total:               8 044               133
+
+D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\SRC\IAR: [4]
+    HAL_CM3.o              292
+    SVC_Table.o                       4
+    --------------------------------------------
+    Total:                 292        4
+
+D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\Templates: [5]
+    RTX_Conf_CM.o           22       68    2 228
+    --------------------------------------------
+    Total:                  22       68    2 228
+
+D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\UserCodeTemplates: [6]
+    MailQueue.o            180       52      688
+    MemPool.o              120       28      596
+    MsgQueue.o             200       52      684
+    Mutex.o                116       20       24
+    Semaphore.o            108       20       16
+    Thread.o                48       16        4
+    --------------------------------------------
+    Total:                 772      188    2 012
+
+command line: [7]
+    --------------------------------------------
+    Total:
+
+dl7M_tln.a: [8]
+    exit.o                   4
+    --------------------------------------------
+    Total:                   4
+
+rt7M_tl.a: [9]
+    XXexit.o                12
+    cexit.o                 10
+    cmain.o                 26
+    copy_init3.o            46
+    cstartup_M.o            12
+    data_init.o             40
+    zero_init3.o            34
+    --------------------------------------------
+    Total:                 180
+
+    Linker created                   38    1 024
+------------------------------------------------
+    Grand Total:         9 786      562    5 397
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+?main                   0x00002a31         Code  Gb  cmain.o [9]
+CMSIS_RTOS_API_Version  0x00002b48    0x4  Data  Gb  RTX_Conf_CM.o [5]
+CMSIS_RTOS_RTX_Version  0x00002b4c    0x4  Data  Gb  RTX_Conf_CM.o [5]
+CSTACK$$Base            0x1ffff118          --   Gb  - Linker created -
+CSTACK$$Limit           0x1ffff518          --   Gb  - Linker created -
+Config                  0x00000400   0x10  Data  Gb  Cpu.o [1]
+Cpu_INT_NMIInterrupt    0x000023e5    0x8  Code  Gb  Cpu.o [1]
+Cpu_Interrupt           0x000023ed    0x2  Code  Gb  Cpu.o [1]
+Init_MailQueue          0x00002781   0x46  Code  Gb  MailQueue.o [6]
+Init_MemPool            0x00002835   0x2a  Code  Gb  MemPool.o [6]
+Init_MsgQueue           0x000026b9   0x50  Code  Gb  MsgQueue.o [6]
+Init_Mutex              0x000028ad   0x2a  Code  Gb  Mutex.o [6]
+Init_Semaphore          0x00002921   0x2c  Code  Gb  Semaphore.o [6]
+Init_Thread             0x0000298d   0x20  Code  Gb  Thread.o [6]
+OS_Tick_Handler         0x00002697         Code  Gb  HAL_CM3.o [4]
+PE_low_level_init       0x0000249f   0x88  Code  Gb  Cpu.o [1]
+PendSV_Handler          0x0000265b         Code  Gb  HAL_CM3.o [4]
+Region$$Table$$Base     0x00002a0c          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00002a30          --   Gb  - Linker created -
+SVC_Count               0x00002b64         Data  Gb  SVC_Table.o [4]
+SVC_Handler             0x000025f1         Code  Gb  HAL_CM3.o [4]
+SVC_Table               0x00002b68         Data  Gb  SVC_Table.o [4]
+SysTick_Handler         0x00002691         Code  Gb  HAL_CM3.o [4]
+Thread                  0x000029b5    0x8  Code  Gb  Thread.o [6]
+Thread_MailQueue1       0x000027c7   0x2e  Code  Gb  MailQueue.o [6]
+Thread_MailQueue2       0x000027f5   0x28  Code  Gb  MailQueue.o [6]
+Thread_MemPool          0x0000285f   0x3e  Code  Gb  MemPool.o [6]
+Thread_MsgQueue1        0x00002709   0x2e  Code  Gb  MsgQueue.o [6]
+Thread_MsgQueue2        0x00002737   0x28  Code  Gb  MsgQueue.o [6]
+Thread_Mutex            0x000028d7   0x3a  Code  Gb  Mutex.o [6]
+Thread_Semaphore        0x0000294d   0x2e  Code  Gb  Semaphore.o [6]
+__VECTOR_TABLE_START {Abs}
+                        0x00000000          --   Gb  command line/config [7]
+__clz                   0x000011fd    0x8  Code  Lc  rt_Task.o [3]
+__cmain                 0x00002a31         Code  Gb  cmain.o [9]
+__disable_irq           0x00001e19    0xc  Code  Lc  rt_List.o [3]
+__disable_irq           0x00001b0d    0xc  Code  Lc  rt_Mailbox.o [3]
+__disable_irq           0x00001a41    0xc  Code  Lc  rt_MemBox.o [3]
+__disable_irq           0x000020bd    0xc  Code  Lc  rt_System.o [3]
+__enable_irq            0x00001e15    0x4  Code  Lc  rt_List.o [3]
+__enable_irq            0x00001b09    0x4  Code  Lc  rt_Mailbox.o [3]
+__enable_irq            0x00001a3d    0x4  Code  Lc  rt_MemBox.o [3]
+__enable_irq            0x000020b9    0x4  Code  Lc  rt_System.o [3]
+__exit                  0x00002a5d         Code  Gb  XXexit.o [9]
+__iar_copy_init3        0x000011cf   0x2e  Code  Gb  copy_init3.o [9]
+__iar_data_init3        0x000029e5   0x28  Code  Gb  data_init.o [9]
+__iar_program_start     0x00002b1d         Code  Gb  cstartup_M.o [9]
+__iar_zero_init3        0x00001ae7   0x22  Code  Gb  zero_init3.o [9]
+__low_level_init        0x000023ef   0xb0  Code  Gb  Cpu.o [1]
+__svcKernelInitialize   0x00000485    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcKernelStart        0x00000491    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcMailCreate         0x00000ed5    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcMessageCreate      0x00000c95    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcMessageGet         0x00000cc1   0x24  Code  Lc  rt_CMSIS.o [3]
+__svcMessagePut         0x00000ca1    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcMutexCreate        0x000008b5    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcMutexRelease       0x000008cd    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcMutexWait          0x000008c1    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcPoolCreate         0x00000b79    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcSemaphoreCreate    0x000009d9    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcSemaphoreRelease   0x000009f1    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcSemaphoreWait      0x000009e5    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcThreadCreate       0x00000635    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcThreadGetId        0x00000641    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcThreadTerminate    0x0000064d    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcThreadYield        0x00000659    0xa  Code  Lc  rt_CMSIS.o [3]
+__svcTimerCall          0x000007e5   0x1a  Code  Lc  rt_CMSIS.o [3]
+__sysMailAlloc          0x00000ee1    0xe  Code  Lc  rt_CMSIS.o [3]
+__sysMailFree           0x00000ef1    0xa  Code  Lc  rt_CMSIS.o [3]
+__sysPoolAlloc          0x00000b85    0xa  Code  Lc  rt_CMSIS.o [3]
+__sysPoolFree           0x00000b91    0xa  Code  Lc  rt_CMSIS.o [3]
+__vect_table {Abs}      0x00000000          --   Gb  command line/config [7]
+__vector_table          0x00000000   0xf8  Data  Gb  Vectors.o [1]
+_alloc_box              0x000025b9         Code  Gb  HAL_CM3.o [4]
+_call_main              0x00002a3d         Code  Gb  cmain.o [9]
+_exit                   0x00002a51         Code  Gb  cexit.o [9]
+_free_box               0x000025d5         Code  Gb  HAL_CM3.o [4]
+_init_box               0x00001a4d   0x52  Code  Gb  rt_MemBox.o [3]
+_main                   0x00002a47         Code  Gb  cmain.o [9]
+dbg_init                0x00002299   0x20  Code  Gb  HAL_CM.o [3]
+dbg_msg                 0x1ffff110    0x1  Data  Gb  HAL_CM.o [3]
+dbg_task_notify         0x000022b9   0x22  Code  Gb  HAL_CM.o [3]
+dbg_task_switch         0x000022db    0xe  Code  Gb  HAL_CM.o [3]
+exit                    0x00002a4b    0x4  Code  Gb  exit.o [8]
+isrMessageGet           0x00000e17   0x62  Code  Lc  rt_CMSIS.o [3]
+isrMessagePut           0x00000de1   0x36  Code  Lc  rt_CMSIS.o [3]
+isrSemaphoreRelease     0x00000ab9   0x2e  Code  Lc  rt_CMSIS.o [3]
+isr_mbx_receive         0x00001cc5   0x4e  Code  Gb  rt_Mailbox.o [3]
+isr_mbx_send            0x00001cb9    0xc  Code  Gb  rt_Mailbox.o [3]
+isr_sem_send            0x000019f3    0xe  Code  Gb  rt_Semaphore.o [3]
+m_tmr                   0x1ffff100    0x4  Data  Gb  RTX_Conf_CM.o [5]
+main                    0x000029bd   0x28  Code  Gb  ProcessorExpert.o [2]
+mid_MsgQueue            0x1ffff0e0    0x4  Data  Gb  MsgQueue.o [6]
+mid_Thread_Mutex        0x1ffff0e8    0x4  Data  Gb  Mutex.o [6]
+mp_stk                  0x1fffe008  0x4c0  Data  Gb  RTX_Conf_CM.o [5]
+mp_stk_size             0x00002b58    0x4  Data  Gb  RTX_Conf_CM.o [5]
+mp_tcb                  0x1fffed90  0x178  Data  Gb  RTX_Conf_CM.o [5]
+mp_tcb_size             0x00002a4e    0x2  Data  Gb  RTX_Conf_CM.o [5]
+mp_tmr_size             0x00002a5a    0x2  Data  Gb  RTX_Conf_CM.o [5]
+mpid_MemPool            0x1ffff0d0    0x4  Data  Gb  MemPool.o [6]
+mpid_MemPool2           0x1ffff0dc    0x4  Data  Gb  MsgQueue.o [6]
+osKernelInitialize      0x00000589   0x22  Code  Gb  rt_CMSIS.o [3]
+osKernelStart           0x000005ab   0x84  Code  Gb  rt_CMSIS.o [3]
+osMailAlloc             0x00001093   0x1e  Code  Gb  rt_CMSIS.o [3]
+osMailCreate            0x00001069   0x2a  Code  Gb  rt_CMSIS.o [3]
+osMailFree              0x000010b1   0x1a  Code  Gb  rt_CMSIS.o [3]
+osMailGet               0x000010e7   0x3a  Code  Gb  rt_CMSIS.o [3]
+osMailPut               0x000010cb   0x1c  Code  Gb  rt_CMSIS.o [3]
+osMessageCreate         0x00000e79   0x2a  Code  Gb  rt_CMSIS.o [3]
+osMessageGet            0x00000ebf   0x16  Code  Gb  rt_CMSIS.o [3]
+osMessagePut            0x00000ea9   0x16  Code  Gb  rt_CMSIS.o [3]
+osMessageQId_osTimerMessageQ
+                        0x1ffff0fc    0x4  Data  Gb  RTX_Conf_CM.o [5]
+osMutexCreate           0x0000097d   0x2a  Code  Gb  rt_CMSIS.o [3]
+osMutexRelease          0x000009c5   0x14  Code  Gb  rt_CMSIS.o [3]
+osMutexWait             0x000009b1   0x14  Code  Gb  rt_CMSIS.o [3]
+osPoolCAlloc            0x00000c51   0x22  Code  Gb  rt_CMSIS.o [3]
+osPoolCreate            0x00000c1f   0x2c  Code  Gb  rt_CMSIS.o [3]
+osPoolFree              0x00000c73   0x1e  Code  Gb  rt_CMSIS.o [3]
+osSemaphoreCreate       0x00000ae7   0x2a  Code  Gb  rt_CMSIS.o [3]
+osSemaphoreRelease      0x00000b4b   0x16  Code  Gb  rt_CMSIS.o [3]
+osSemaphoreWait         0x00000b35   0x16  Code  Gb  rt_CMSIS.o [3]
+osThreadCreate          0x00000759   0x2c  Code  Gb  rt_CMSIS.o [3]
+osThreadExit            0x00000799    0xc  Code  Gb  rt_CMSIS.o [3]
+osThreadId_osTimerThread
+                        0x1ffff0f8    0x4  Data  Gb  RTX_Conf_CM.o [5]
+osThreadYield           0x00000785   0x14  Code  Gb  rt_CMSIS.o [3]
+osTimerCall             0x00000879    0x8  Code  Gb  rt_CMSIS.o [3]
+osTimerThread           0x00000881   0x30  Code  Gb  rt_CMSIS.o [3]
+os_active_TCB           0x1ffff04c   0x1c  Data  Gb  RTX_Conf_CM.o [5]
+os_clockrate            0x00002b50    0x4  Data  Gb  RTX_Conf_CM.o [5]
+os_dly                  0x1ffff080   0x18  Data  Gb  rt_List.o [3]
+os_error                0x00002373   0x14  Code  Gb  RTX_Conf_CM.o [5]
+os_fifo                 0x1fffef08   0x84  Data  Gb  RTX_Conf_CM.o [5]
+os_fifo_size            0x00002b69    0x1  Data  Gb  RTX_Conf_CM.o [5]
+os_flags                0x00002b68    0x1  Data  Gb  RTX_Conf_CM.o [5]
+os_idle_TCB             0x1fffebac   0x34  Data  Gb  rt_Task.o [3]
+os_idle_demon           0x00002371    0x2  Code  Gb  RTX_Conf_CM.o [5]
+os_initialized          0x1ffff111    0x1  Data  Gb  rt_CMSIS.o [3]
+os_lock                 0x1ffff113    0x1  Data  Lc  rt_System.o [3]
+os_mailQ_def_MailQueue  0x00002af8    0xc  Data  Gb  MailQueue.o [6]
+os_mailQ_m_MailQueue    0x1fffe4c8  0x24c  Data  Gb  MailQueue.o [6]
+os_mailQ_p_MailQueue    0x1fffe000    0x8  Data  Gb  MailQueue.o [6]
+os_mailQ_q_MailQueue    0x1fffef8c   0x50  Data  Gb  MailQueue.o [6]
+os_maxtaskrun           0x00002386    0x2  Data  Gb  RTX_Conf_CM.o [5]
+os_messageQ_def_MsgQueue
+                        0x00002b28    0x8  Data  Gb  MsgQueue.o [6]
+os_messageQ_def_osTimerMessageQ
+                        0x00002b30    0x8  Data  Gb  RTX_Conf_CM.o [5]
+os_messageQ_q_MsgQueue  0x1fffefdc   0x50  Data  Gb  MsgQueue.o [6]
+os_messageQ_q_osTimerMessageQ
+                        0x1ffff02c   0x20  Data  Gb  RTX_Conf_CM.o [5]
+os_mutex_cb_SampleMutex
+                        0x1ffff098   0x10  Data  Gb  Mutex.o [6]
+os_mutex_def_SampleMutex
+                        0x00002b38    0x4  Data  Gb  Mutex.o [6]
+os_pool_def_MemPool     0x00002b04    0xc  Data  Gb  MemPool.o [6]
+os_pool_def_MemPool2    0x00002b10    0xc  Data  Gb  MsgQueue.o [6]
+os_pool_m_MemPool       0x1fffe714  0x24c  Data  Gb  MemPool.o [6]
+os_pool_m_MemPool2      0x1fffe960  0x24c  Data  Gb  MsgQueue.o [6]
+os_psh_flag             0x1ffff114    0x1  Data  Lc  rt_System.o [3]
+os_rdy                  0x1ffff068   0x18  Data  Gb  rt_List.o [3]
+os_robin                0x1ffff0a8    0x8  Data  Gb  rt_Robin.o [3]
+os_rrobin               0x00002b40    0x4  Data  Gb  RTX_Conf_CM.o [5]
+os_running              0x1ffff112    0x1  Data  Gb  rt_CMSIS.o [3]
+os_semaphore_cb_SampleSemaphore
+                        0x1ffff0b8    0x8  Data  Gb  Semaphore.o [6]
+os_semaphore_def_SampleSemaphore
+                        0x00002b60    0x4  Data  Gb  Semaphore.o [6]
+os_set_env              0x000025a1         Code  Gb  HAL_CM3.o [4]
+os_stack_mem            0x1fffebe0  0x1b0  Data  Gb  RTX_Conf_CM.o [5]
+os_stack_sz             0x00002b5c    0x4  Data  Gb  RTX_Conf_CM.o [5]
+os_stackinfo            0x00002b3c    0x4  Data  Gb  RTX_Conf_CM.o [5]
+os_thread_def_Thread    0x00002ae8   0x10  Data  Gb  Thread.o [6]
+os_thread_def_Thread_MailQueue1
+                        0x00002a68   0x10  Data  Gb  MailQueue.o [6]
+os_thread_def_Thread_MailQueue2
+                        0x00002a78   0x10  Data  Gb  MailQueue.o [6]
+os_thread_def_Thread_MemPool
+                        0x00002a88   0x10  Data  Gb  MemPool.o [6]
+os_thread_def_Thread_MsgQueue1
+                        0x00002a98   0x10  Data  Gb  MsgQueue.o [6]
+os_thread_def_Thread_MsgQueue2
+                        0x00002aa8   0x10  Data  Gb  MsgQueue.o [6]
+os_thread_def_Thread_Mutex
+                        0x00002ab8   0x10  Data  Gb  Mutex.o [6]
+os_thread_def_Thread_Semaphore
+                        0x00002ad8   0x10  Data  Gb  Semaphore.o [6]
+os_thread_def_osTimerThread
+                        0x00002ac8   0x10  Data  Gb  RTX_Conf_CM.o [5]
+os_tick_init            0x00002189    0xc  Code  Wk  rt_System.o [3]
+os_tick_irqn            0x1ffff0f0    0x4  Data  Gb  rt_System.o [3]
+os_time                 0x1ffff0f4    0x4  Data  Gb  rt_Time.o [3]
+os_timer_head           0x1ffff0ec    0x4  Data  Gb  rt_CMSIS.o [3]
+os_timernum             0x00002b54    0x4  Data  Gb  RTX_Conf_CM.o [5]
+os_trv                  0x00002b44    0x4  Data  Gb  RTX_Conf_CM.o [5]
+os_tsk                  0x1ffff0b0    0x8  Data  Gb  rt_Task.o [3]
+qid_MailQueue           0x1ffff0c8    0x4  Data  Gb  MailQueue.o [6]
+rt_alloc_box            0x00001a9f   0x1e  Code  Gb  rt_MemBox.o [3]
+rt_alloc_mem            0x00001151   0x4a  Code  Gb  rt_Memory.o [3]
+rt_block                0x0000135d   0x38  Code  Gb  rt_Task.o [3]
+rt_chk_robin            0x00002315   0x4a  Code  Wk  rt_Robin.o [3]
+rt_clr_box              0x00000b61   0x16  Code  Lc  rt_CMSIS.o [3]
+rt_dec_dly              0x00001f85   0x88  Code  Gb  rt_List.o [3]
+rt_dispatch             0x00001309   0x54  Code  Gb  rt_Task.o [3]
+rt_evt_psh              0x00002389   0x58  Code  Gb  rt_Event.o [3]
+rt_free_box             0x00001abd   0x2a  Code  Gb  rt_MemBox.o [3]
+rt_free_mem             0x0000119b   0x34  Code  Gb  rt_Memory.o [3]
+rt_get_PSP              0x0000259b         Code  Gb  HAL_CM3.o [4]
+rt_get_TID              0x0000125d   0x26  Code  Lc  rt_Task.o [3]
+rt_get_first            0x00001e95   0x34  Code  Gb  rt_List.o [3]
+rt_get_same_rdy_prio    0x00001ed9   0x20  Code  Gb  rt_List.o [3]
+rt_id2obj               0x00000475    0xe  Code  Lc  rt_CMSIS.o [3]
+rt_inc_qi               0x00001e25   0x2a  Code  Lc  rt_List.o [3]
+rt_init_context         0x00001283   0x58  Code  Lc  rt_Task.o [3]
+rt_init_mem             0x00001131   0x20  Code  Gb  rt_Memory.o [3]
+rt_init_robin           0x00002305   0x10  Code  Wk  rt_Robin.o [3]
+rt_init_stack           0x00002225   0x52  Code  Gb  HAL_CM.o [3]
+rt_mbx_check            0x00001cb1    0x8  Code  Gb  rt_Mailbox.o [3]
+rt_mbx_init             0x00001b19   0x26  Code  Gb  rt_Mailbox.o [3]
+rt_mbx_psh              0x00001d13   0xfa  Code  Gb  rt_Mailbox.o [3]
+rt_mbx_send             0x00001b3f   0xb0  Code  Gb  rt_Mailbox.o [3]
+rt_mbx_wait             0x00001bef   0xc2  Code  Gb  rt_Mailbox.o [3]
+rt_ms2tick              0x00000411   0x44  Code  Lc  rt_CMSIS.o [3]
+rt_mut_init             0x000017a9   0x16  Code  Gb  rt_Mutex.o [3]
+rt_mut_release          0x000017bf  0x10e  Code  Gb  rt_Mutex.o [3]
+rt_mut_wait             0x000018cd   0x92  Code  Gb  rt_Mutex.o [3]
+rt_pop_req              0x00002105   0x84  Code  Gb  rt_System.o [3]
+rt_psh_req              0x000020eb   0x1a  Code  Gb  rt_System.o [3]
+rt_psq_enq              0x0000206b   0x34  Code  Gb  rt_List.o [3]
+rt_put_dly              0x00001f29   0x5c  Code  Gb  rt_List.o [3]
+rt_put_prio             0x00001e4f   0x46  Code  Gb  rt_List.o [3]
+rt_put_rdy_first        0x00001ec9   0x10  Code  Gb  rt_List.o [3]
+rt_resort_prio          0x00001ef9   0x30  Code  Gb  rt_List.o [3]
+rt_ret_regs             0x00002277    0x6  Code  Lc  HAL_CM.o [3]
+rt_ret_val              0x0000227d    0xc  Code  Gb  HAL_CM.o [3]
+rt_ret_val2             0x00002289   0x10  Code  Gb  HAL_CM.o [3]
+rt_rmv_dly              0x0000203f   0x2c  Code  Gb  rt_List.o [3]
+rt_rmv_list             0x0000200d   0x32  Code  Gb  rt_List.o [3]
+rt_sem_init             0x00001969    0xc  Code  Gb  rt_Semaphore.o [3]
+rt_sem_psh              0x00001a01   0x32  Code  Gb  rt_Semaphore.o [3]
+rt_sem_send             0x00001975   0x2e  Code  Gb  rt_Semaphore.o [3]
+rt_sem_wait             0x000019a3   0x50  Code  Gb  rt_Semaphore.o [3]
+rt_set_PSP              0x00002595         Code  Gb  HAL_CM3.o [4]
+rt_stk_check            0x000021c9   0x28  Code  Wk  rt_System.o [3]
+rt_svc_init             0x00001205   0x58  Code  Lc  rt_Task.o [3]
+rt_switch_req           0x000012db   0x2e  Code  Gb  rt_Task.o [3]
+rt_sys_init             0x00001667   0xae  Code  Gb  rt_Task.o [3]
+rt_sys_start            0x00001715   0x36  Code  Gb  rt_Task.o [3]
+rt_systick              0x00002195   0x34  Code  Gb  rt_System.o [3]
+rt_systick_init         0x000020c9   0x22  Code  Lc  rt_System.o [3]
+rt_tid2ptcb             0x00000455   0x20  Code  Lc  rt_CMSIS.o [3]
+rt_timer_insert         0x000007a5   0x40  Code  Lc  rt_CMSIS.o [3]
+rt_tsk_create           0x00001475   0x66  Code  Gb  rt_Task.o [3]
+rt_tsk_delete           0x000014db  0x18c  Code  Gb  rt_Task.o [3]
+rt_tsk_pass             0x00001395   0x2c  Code  Gb  rt_Task.o [3]
+rt_tsk_prio             0x000013d9   0x9c  Code  Gb  rt_Task.o [3]
+rt_tsk_self             0x000013c1   0x18  Code  Gb  rt_Task.o [3]
+sid_Thread_Semaphore    0x1ffff108    0x4  Data  Gb  Semaphore.o [6]
+svcKernelInitialize     0x0000049d   0x84  Code  Gb  rt_CMSIS.o [3]
+svcKernelStart          0x00000521   0x68  Code  Gb  rt_CMSIS.o [3]
+svcMailCreate           0x00000efd   0x6a  Code  Gb  rt_CMSIS.o [3]
+svcMessageCreate        0x00000ce9   0x44  Code  Gb  rt_CMSIS.o [3]
+svcMessageGet           0x00000d6d   0x74  Code  Gb  rt_CMSIS.o [3]
+svcMessageGet_          0x00000cad   0x14  Code  Gb  rt_CMSIS.o [3]
+svcMessagePut           0x00000d2d   0x40  Code  Gb  rt_CMSIS.o [3]
+svcMutexCreate          0x000008d9   0x3a  Code  Gb  rt_CMSIS.o [3]
+svcMutexRelease         0x00000955   0x28  Code  Gb  rt_CMSIS.o [3]
+svcMutexWait            0x00000915   0x40  Code  Gb  rt_CMSIS.o [3]
+svcPoolCreate           0x00000b9d   0x3e  Code  Gb  rt_CMSIS.o [3]
+svcSemaphoreCreate      0x000009fd   0x4c  Code  Gb  rt_CMSIS.o [3]
+svcSemaphoreRelease     0x00000a89   0x2e  Code  Gb  rt_CMSIS.o [3]
+svcSemaphoreWait        0x00000a49   0x3e  Code  Gb  rt_CMSIS.o [3]
+svcThreadCreate         0x00000665   0x8e  Code  Gb  rt_CMSIS.o [3]
+svcThreadGetId          0x000006f5   0x1c  Code  Gb  rt_CMSIS.o [3]
+svcThreadTerminate      0x00000711   0x3a  Code  Gb  rt_CMSIS.o [3]
+svcThreadYield          0x0000074d    0xa  Code  Gb  rt_CMSIS.o [3]
+svcTimerCall            0x00000801   0x2c  Code  Gb  rt_CMSIS.o [3]
+sysMailAlloc            0x00000f69   0x8a  Code  Gb  rt_CMSIS.o [3]
+sysMailFree             0x00000ff5   0x74  Code  Gb  rt_CMSIS.o [3]
+sysPoolAlloc            0x00000bdd   0x26  Code  Gb  rt_CMSIS.o [3]
+sysPoolFree             0x00000c05   0x1a  Code  Gb  rt_CMSIS.o [3]
+sysThreadError          0x0000062f    0x2  Code  Lc  rt_CMSIS.o [3]
+sysTimerTick            0x0000082d   0x4c  Code  Gb  rt_CMSIS.o [3]
+tid_Thread              0x1ffff10c    0x4  Data  Gb  Thread.o [6]
+tid_Thread_MailQueue1   0x1ffff0c0    0x4  Data  Gb  MailQueue.o [6]
+tid_Thread_MailQueue2   0x1ffff0c4    0x4  Data  Gb  MailQueue.o [6]
+tid_Thread_MemPool      0x1ffff0cc    0x4  Data  Gb  MemPool.o [6]
+tid_Thread_MsgQueue1    0x1ffff0d4    0x4  Data  Gb  MsgQueue.o [6]
+tid_Thread_MsgQueue2    0x1ffff0d8    0x4  Data  Gb  MsgQueue.o [6]
+tid_Thread_Mutex        0x1ffff0e4    0x4  Data  Gb  Mutex.o [6]
+tid_Thread_Semaphore    0x1ffff104    0x4  Data  Gb  Semaphore.o [6]
+
+
+[1] = D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Generated_Code
+[2] = D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources
+[3] = D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\SRC
+[4] = D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\SRC\IAR
+[5] = D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\Templates
+[6] = D:\eclipse_WS\IAR_CMSIS-RTX\Debug\Sources\UserCodeTemplates
+[7] = command line
+[8] = dl7M_tln.a
+[9] = rt7M_tl.a
+
+  9 786 bytes of readonly  code memory
+    562 bytes of readonly  data memory
+  5 397 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
